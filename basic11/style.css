@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}
+
+/* 가로 방향 정렬 justify-items */
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    height: 120vh;
+    justify-items: stretch; /* 기본값 */
+    justify-items: start; /* 행을 기준으로 시작점(왼쪽기준)으로 옮기겠다 */
+    justify-items: end; /* 행을 기준으로 끝(왼쪽기준)으로 옮기겠다 */
+
+}

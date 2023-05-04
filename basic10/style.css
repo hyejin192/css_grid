@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}
+
+/* 세로 방향 정렬 align-items */
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    height: 120vh;
+    /* align-items : 각 셀 안에서의 움직임 */
+    align-items: stretch; /* 기본값 */
+    align-items: start; /* 내 공간은 유지하면서 안의 컨텐츠를 위로 올리겠다 */
+    align-items: end; /* 내 공간은 유지하면서 안의 컨텐츠를 끝으로 내리겠다 */
+
+}
+.item {
+}

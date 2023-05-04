@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+    display: grid;
+    /* gird와 flex는 자식요소가 inline요소일지라도 block요소로 바뀐다. */
+    grid-template-columns: 100px 300px;
+    grid-template-columns: 100px 1fr 200px;
+    /* fr(fraction) 숫자 비율대로 트랙의 크기를 나눔(화면을 다 차지) */
+    grid-template-columns: 1fr 3fr 1fr;
+    /* 밑의 내용과 같음 1fr을 5번 반복하겠다
+    =  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5,1fr);
+    /* 1fr,2fr,3fr 을 3번 반복  */
+    grid-template-columns: repeat(3,1fr 2fr 3fr);
+    grid-template-columns: 100px 1fr 300px;
+    grid-template-rows: 200px 200px;
+    /* grid-template-rows : 설정한 1,2줄은 높이가 200px로 적용되고
+    나머지는 auto가 된다 */
+    /* 동등한 비율 */
+    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    /* 세번째는 높이 300px로 고정 */
+    grid-template-rows: repeat(2,1fr) 300px;
+    height: 80vh;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}

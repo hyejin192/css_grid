@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+
+}
+/* auto-fill , auto-fit */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,20%);
+    grid-template-columns: repeat(3,minmax(20%,auto));
+    grid-template-columns: repeat(auto-fill,minmax(20%,auto));
+    /* 빈곳이 생기면 늘려서 채운다 */
+    grid-template-columns: repeat(auto-fit,minmax(20%,auto));
+}
