@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}
+
+/* place-content - (align-contents + justify-contents)
+값을 하나만 적으면 두 속성 모두에게 적용 */
+.container {
+    display: grid;
+    gap: 5px;
+    height: 100vh;  
+    place-content: center start;
+    /* place-content: center; = align-content:center, justify-content:center */
+    place-content: space-evenly center;
+
+
+
+}
+

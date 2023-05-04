@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}
+
+/* align-self 개별 아이템 새로 정렬 */
+.container {
+    display: grid;
+    gap: 10px;
+    height: 100vh;  
+    grid-template-columns: repeat(3,1fr);
+
+}
+.item:nth-child(2) {
+    align-self: center;
+}

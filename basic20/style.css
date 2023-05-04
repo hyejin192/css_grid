@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}
+
+/* z-index : z축으로 배치순서*/
+.container {
+    display: grid;
+    gap: 10px;
+    height: 100vh;  
+    grid-template-columns: repeat(3,1fr);
+
+}
+.item:nth-child(2) {transform: scale(2);}
+.item:nth-child(3) {transform: scale(3);}
+/* flex나 grid는 position 없이 z-index가 실행됨 */
+

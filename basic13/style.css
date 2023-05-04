@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid #000;
+    background-color: rosybrown;
+    padding: 10px;
+}
+.container .item {
+    border: 2px solid #000;
+    background-color: lavender;
+    padding: 10px;
+}
+
+/* align-content - container의 높이보다 item의 총 높이가 작다면 
+item  통째로 정렬  */
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    height: 100vh;
+    align-content: center; /* align의 컨텐츠 전부 다를 센터로 정렬 */
+    align-content: start; /* align의 컨텐츠 전부 다를 시작점(위)으로 정렬 */
+    align-content: end; /* align의 컨텐르 전부 다를 끝으로 정렬 */
+}
+
